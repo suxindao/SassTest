@@ -53,3 +53,23 @@ blockquote {
 		padding: 10px 0 0 0;
 	}
 }
+
+.two-cols{
+	@include column-count(3);
+	@include column-rule(1px, dotted, lighten(red, 80%));
+}
+
+$borderDirection:       top !default; 
+$baseFontSize:          12px !default;
+$baseLineHeight:        1.5 !default;
+
+.border-#{$borderDirection}{
+  border-#{$borderDirection}:1px solid #ccc;
+  vertical-align: #{$borderDirection};
+}
+
+// @debug 1+1;
+
+.patha{
+	background-image: image-url('c.jpg');
+}

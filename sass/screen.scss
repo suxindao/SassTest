@@ -1,0 +1,55 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography";
+@import "variables";
+@import "mixins";
+
+.title{
+	color: red;
+}
+
+a {
+	@include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
+}
+
+blockquote {
+	margin: 0 0 0 1em;
+	z-index: 5;
+	position: relative;
+	font-family: $blockquote;
+	font-style: italic;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 1.3em;
+	@include MQ(Splus) {
+		padding: 0 .5em;
+		font-size: 1.5em;
+	}
+	@include MQ(Mplus) {
+		font-size: 1.8em;
+		margin: 0 0 0 3%;
+		width: 76%;
+	}
+	@include MQ(Lplus) {
+		font-size: 2em;
+	}
+	footer {
+		@include MQ(XSplus) {
+			font-size: .8em;
+		}
+		@include MQ(Splus) {
+			font-size: .7em;
+		}
+		@include MQ(Lplus) {
+			font-size: .6em;
+		}
+		border-top: 2px dotted darken($color11, 10%);
+		margin: 20px 0 0 0;
+		padding: 10px 0 0 0;
+	}
+}
